@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article Template | DownField Sports</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #111;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .article-shell {
+      width: min(920px, 92vw);
+      margin: 40px auto 60px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #1B1F3B;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-card {
+      background: white;
+      border: 1px solid rgba(27, 31, 59, 0.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .article-hero {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-body {
+      padding: 30px;
+    }
+
+    .article-meta {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #6b6b6b;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 14px;
+      color: #1B1F3B;
+    }
+
+    .article-dek {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 26px;
+    }
+
+    .article-copy p + p {
+      margin-top: 18px;
+    }
+
+    .article-copy h2 {
+      margin: 30px 0 10px;
+      color: #1B1F3B;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .article-note {
+      margin-top: 26px;
+      padding: 16px 18px;
+      border-left: 4px solid #D4A373;
+      background: #f8f2eb;
+      color: #3f3f3f;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .article-shell {
+        margin: 20px auto 40px;
+      }
+
+      .article-hero {
+        height: 260px;
+      }
+
+      .article-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="article-shell">
+    <a class="back-link" href="../index.html">Back to Home</a>
+
+    <article class="article-card">
+      <img
+        class="article-hero"
+        id="articleHero"
+        src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1200&q=80"
+        alt=""
+      />
+
+      <div class="article-body">
+        <span class="article-meta" id="articleMeta"></span>
+        <h1 id="articleTitle">Big Changes: Getting Ready for the 2026 NFL Season</h1>
+        <p class="article-dek" id="articleDek">With all the Free Agency Frenzy we take a look at the teams with the biggest changes.</p>
+
+        <div class="article-copy">
+          <!--
+            TEMPLATE NOTE:
+            Duplicate this file when you start a real article.
+            Example filename: articles/my-first-article.html
+            Then update the matching href inside one of your /content files.
+            The homepage metadata file should be your source of truth for:
+            image, alt text, publishedAt, title, and summary.
+            This article file should mainly hold the body copy.
+          -->
+          <p1>With Free Agency wrapping up and teams trying to change their fortunes for next season, we look at teams with biggest changes made so far this offseason before they head to the NFL Draft at the end of April. </p1>  
+          <h2>The New York Giants</h2>  
+          <p>The New York Giants’ fortunes seem to be improving. Last year, they drafted Jaxson Dart and Cam Skattebo, and this offseason, they brought in John Harbough. Harbaugh and his team quickly reshaped the team. On the first day of free agency, they acquired Isaiah Likely, a tight end with sure hands who can create mismatches. They also made under-the-radar moves at wide receiver, signing Darnell Mooney and Calvin Austin III. Mooney, who had a 64-catch, 992-yard season with the Falcons in 2024, could be an impact player and fill their WR2 role. Fullback Patrick Ricard’s signing highlights the identity shift Harbaugh is trying to bring in. Ricard’s arrival signals a ground-and-pound style offense. They also bolstered their offensive line by keeping RT Jermaine Eluemunor and bringing over Daniel Faalele from Baltimore. On the defensive side, they signed LB Tremaine Edmunds, who can be a key piece on a defense lacking veteran leadership. Speed and size have been priorities for the Giants this offseason, and only time will tell if this shift leads to wins. </p>
+          <h2>The Tennessee Titans</h2>
+          <p>The Tennessee Titans had the second most cap space in the NFL ($92.7 million) coming into the 2026 offseason. They brought in new head coach Robert Saleh and OC Brian Daboll to build a winning team around the 2025 first overall pick, Cam Ward. Ranking 26th in yards allowed, 28th in points allowed, 20th in passing defense, and 25th in rushing defense in 2025, most of their offseason moves focused on strengthening their defensive. They signed John Franklin-Myers (3 yrs, $63 million) to bolster their interior line, and added cornerbacks Alontae Taylor (3 yrs, $60 million) and Cor’Dale Flott (3 yrs, $45 million) to their secondary. Taylor, has an established resume, recorded 11 passes defended, 2 INTs, and 2 sacks in 2025 and has been a starter since entering the league. Flott, cemented himself as a starter in 2025 and had a decent year with the Giants, but the titans paid him because he is young (25) and has high upside. The Titans’ defensive personnel improvements paired with Saleh’s leadership should see a significant upgrade in 2026. However, their offensive moves raise questions. Signing Wan’Dale Robinson to a 4-year $70 million deal may be overpay after his breakout year in 2025, where he recorded 92 receptions and 1,014 yards with the Giants. While he primarily operates out of the slot, he demonstrated all-around receiver abilities last season. He’s expected to be the Titans’ WR1 and must continue to develop his ability to line up outside to justify that contract Adding TE Daniel Bellinger for 3 years, $24 million, could be seen as an overpay as well. He’s a strong blocker, but his pass catching abilities are limited. Overall, the Titans have significantly improved their defense, while giving Ward more passing options. Given their recent free agency moves, it would not be surprising to hear a wide receiver or running back be selected with the fourth pick in the 2026 NFL draft.</p>
+          <h2>The Miami Dolphins</h2>
+          <p>Out with the old, in with the new! Everything in Miami is new. They brought in new GM Jon-Eric Sullivan from Green Bay, and he brought along his defensive coordinator Jeff Hafley to be the Head Coach. They are not the only members from Green Bay that hopped on the plane heading to Miami though, Quarterback Malik Wallis has joined them to completely reshape the Miami dolphins. They have moved off the dynamic WR pairing of Jaylen Waddle, traded to the Broncos, and injured star Tyreek Hill. So who Willis throws the ball too remains to be seen, though they did see a breakout campaign from WR Malik Washinington who figures to step up and be paired with a WR selected in this upcoming draft. So, wholesale changes were made by this new GM/HC pairing, and everything is Miami is new, but is it better? </p>
+          <h2>The Minnesota Vikings </h2>
+          <p>The Minnesota Vikings love the idea of developing a QB, they just don’t like committing to actually doing it. After 10 games of the JJ McCarthy experience, enter Kyler Murray.  Kevin O’Connell is one of the brightest offensive minds in the sport, and with the weapons of Justin Jefferson, Jordan Addison, and TJ Hockenson he should be able to get the best out of his new QB. Murray is the most athletic QB O’Connell has ever had, and the potential is there for an exciting offense; only fear is Murray has excelled on off-script/off-schedule plays, will there be any frustration with the pairing?   </p>
+          <p>The NFL Offseason always provides hope for teams, and these teams certainly made big changes to give there fans and organizations a clear direction for what next season will look like.</p>
+        
+          <!--
+          This file is a template only. It will not show up on your homepage unless you specifically link to it from one of your content files.
+          -->
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="../content/latest/latest.js"></script>
+  <script>
+    function formatDisplayDate(dateString) {
+      return new Date(`${dateString}T12:00:00`).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric"
+      });
+    }
+
+    const currentArticlePath = `articles/${window.location.pathname.split("/").pop()}`;
+    const articleData = window.dfsLatest.find((article) => article.href === currentArticlePath);
+
+    if (articleData) {
+      document.title = `${articleData.title} | DownField Sports`;
+      document.getElementById("articleHero").src = articleData.image;
+      document.getElementById("articleHero").alt = articleData.alt;
+      document.getElementById("articleMeta").textContent = formatDisplayDate(articleData.publishedAt);
+      document.getElementById("articleTitle").textContent = articleData.title;
+      document.getElementById("articleDek").textContent = articleData.summary;
+    }
+  </script>
+</body>
+</html>
