@@ -56,37 +56,43 @@
       margin: 0;
     }
 
-    .logo-mark-shell {
-      display: block;
-      height: 58px;
+    .logo-mark-shell,
+    .logo-title-shell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
       flex: 0 0 auto;
     }
 
+    .logo-mark-shell {
+      min-height: 70px;
+      max-height: 120px;
+    }
+
     .logo-title-shell {
-      display: block;
-      height: 156px;
-      overflow: hidden;
-      flex: 0 0 auto;
+      min-height: 70px;
+      max-height: 120px;
       max-width: calc(100vw - 220px);
       margin-left: auto;
       margin-right: 0;
       transform: translateX(clamp(0px, 1.6vw, 18px));
     }
 
-    .logo-mark {
+    .logo-mark,
+    .logo-title {
       display: block;
       width: auto;
-      height: 170px;
-      margin-top: -60px;
+      max-height: 120px;
+      margin-top: 0;
+      object-fit: contain;
+    }
+
+    .logo-mark {
       clip-path: inset(64px 0 52px 58px);
     }
 
     .logo-title {
-      display: block;
-      width: auto;
-      height: 480px;
-      margin-top: clamp(-146px, -10vw, -108px);
       clip-path: inset(72px 0 96px 0);
     }
 
@@ -97,7 +103,7 @@
       position: relative;
       padding-left: 24px;
       padding-right: 194px;
-      margin-top: -34px;
+      margin-top: 0;
       gap: 14px 30px;
       width: 100%;
     }
@@ -960,8 +966,8 @@
       }
 
       .logo-mark {
-        height: 120px;
-        margin-top: -42px;
+        max-height: 80px;
+        margin-top: 0;
         clip-path: inset(44px 0 36px 40px);
       }
 
@@ -972,24 +978,26 @@
       }
 
       .logo-mark-shell {
-        height: 44px;
+        min-height: 44px;
+        max-height: 80px;
       }
 
       .logo-title-shell {
-        height: clamp(92px, 13vw, 112px);
+        min-height: 44px;
+        max-height: 80px;
         max-width: calc(100vw - 150px);
         margin-right: 0;
         transform: translateX(clamp(0px, 1.8vw, 18px));
       }
 
       .logo-title {
-        height: clamp(270px, 36vw, 332px);
-        margin-top: clamp(-100px, -11vw, -76px);
+        max-height: 80px;
+        margin-top: 0;
         clip-path: inset(48px 0 64px 0);
       }
 
       nav {
-        margin-top: -24px;
+        margin-top: 0;
       }
 
       body.nav-editorial nav {
