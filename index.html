@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DownField Sports</title>
+  <title>DownField Sports - NFL & MLB News, Analysis & Scores</title>
+  <meta name="description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://downfieldsports.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DownField Sports - NFL & MLB News, Analysis & Scores" />
+  <meta property="og:description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
+  <meta property="og:url" content="https://downfieldsports.com/" />
+  <meta property="og:image" content="/Images/Article Images/Football+Field.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DownField Sports - NFL & MLB News, Analysis & Scores" />
+  <meta name="twitter:description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
+  <meta name="twitter:image" content="/Images/Article Images/Football+Field.png" />
   <link rel="shortcut icon" href="/Images/favicon/favicon.ico?v=4" />
   <link rel="icon" href="/Images/favicon/favicon.ico?v=4" />
   <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon/favicon_package_32.png?v=4" />
   <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon/favicon_package_16.png?v=4" />
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/favicon_package_180.png?v=4" />
+  <script id="dsq-count-scr" src="//downfieldsports.disqus.com/count.js" async></script>
   <style>
     * {
       box-sizing: border-box;
@@ -1089,7 +1102,7 @@
     function renderFeaturedSection() {
       const { featured, sideStories } = homepageData;
       featuredSection.innerHTML = `
-        <a href="${featured.href}" class="featured-main">
+        <a href="${featured.href}" class="featured-main" data-disqus-identifier="${featured.href}" data-disqus-url="https://downfieldsports.com/${featured.href}">
           <img src="${featured.image}" alt="${featured.alt}">
           <div class="featured-content">
             <span class="article-meta">${formatDisplayDate(featured.publishedAt)}</span>
@@ -1100,7 +1113,7 @@
         </a>
         <div class="side-stories">
           ${sideStories.map((story) => `
-            <a href="${story.href}" class="side-story">
+            <a href="${story.href}" class="side-story" data-disqus-identifier="${story.href}" data-disqus-url="https://downfieldsports.com/${story.href}">
               <img src="${story.image}" alt="${story.alt}">
               <div class="side-story-content">
                 <span class="article-meta">${formatDisplayDate(story.publishedAt)}</span>
@@ -1143,7 +1156,7 @@
         <h2 class="section-title">Latest Articles</h2>
         <div class="article-grid">
           ${homepageData.latest.map((article) => `
-            <a href="${article.href}" class="article-card">
+            <a href="${article.href}" class="article-card" data-disqus-identifier="${article.href}" data-disqus-url="https://downfieldsports.com/${article.href}">
               <img src="${article.image}" alt="${article.alt}">
               <div class="article-content">
                 <span class="article-meta">${formatDisplayDate(article.publishedAt)}</span>

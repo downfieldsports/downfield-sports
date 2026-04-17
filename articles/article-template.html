@@ -4,10 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Article Template | DownField Sports</title>
+  <meta name="description" content="DownField Sports article page." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://downfieldsports.com/articles/article-template.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Article Template | DownField Sports" />
+  <meta property="og:description" content="DownField Sports article page." />
+  <meta property="og:url" content="https://downfieldsports.com/articles/article-template.html" />
+  <meta property="og:image" content="/Images/Article Images/Football+Field.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Article Template | DownField Sports" />
+  <meta name="twitter:description" content="DownField Sports article page." />
+  <meta name="twitter:image" content="/Images/Article Images/Football+Field.png" />
   <link rel="icon" href="../Images/favicon/favicon.ico?v=4" />
   <link rel="icon" type="image/png" sizes="32x32" href="../Images/favicon/favicon_package_32.png?v=4" />
   <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon/favicon_package_16.png?v=4" />
   <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon/favicon_package_180.png?v=4" />
+  <script id="dsq-count-scr" src="//downfieldsports.disqus.com/count.js" async></script>
   <style>
     * {
       box-sizing: border-box;
@@ -183,5 +196,21 @@
       document.getElementById("articleDek").textContent = articleData.summary;
     }
   </script>
+
+  <!-- Disqus Comments -->
+  <div id="disqus_thread"></div>
+  <script>
+      var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://downfieldsports.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
