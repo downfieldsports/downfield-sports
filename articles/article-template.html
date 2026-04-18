@@ -114,6 +114,58 @@
       font-size: 0.95rem;
     }
 
+    .comments-section {
+      margin-top: 28px;
+      padding: 28px 30px 34px;
+      border-top: 1px solid rgba(27, 31, 59, 0.12);
+      background:
+        linear-gradient(180deg, rgba(27, 31, 59, 0.03), rgba(27, 31, 59, 0)),
+        #fbfbfc;
+    }
+
+    .comments-eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #8c5f35;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .comments-title {
+      margin-bottom: 8px;
+      color: #1B1F3B;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: 1.05;
+    }
+
+    .comments-intro {
+      max-width: 42rem;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 0.98rem;
+    }
+
+    .comments-panel {
+      padding: 18px;
+      border: 1px solid rgba(27, 31, 59, 0.1);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(17, 17, 17, 0.06);
+    }
+
+    #cusdis_thread {
+      min-height: 220px;
+    }
+
+    #cusdis_thread iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      background: #fff;
+    }
+
     @media (max-width: 700px) {
       .article-shell {
         margin: 20px auto 40px;
@@ -125,6 +177,15 @@
 
       .article-body {
         padding: 20px;
+      }
+
+      .comments-section {
+        padding: 22px 20px 26px;
+      }
+
+      .comments-panel {
+        padding: 14px;
+        border-radius: 14px;
       }
     }
   </style>
@@ -167,6 +228,20 @@
         </div>
       </div>
     </article>
+    <section class="comments-section" aria-labelledby="comments-title">
+      <span class="comments-eyebrow">DownField Discussion</span>
+      <h2 class="comments-title" id="comments-title">Join the conversation</h2>
+      <p class="comments-intro">Share your take, react to the story, and keep the debate respectful.</p>
+      <div class="comments-panel">
+        <div id="cusdis_thread"
+          data-host="https://cusdis.com"
+          data-app-id="4207f769-6521-405b-9253-d8ef609273ff"
+          data-page-id=""
+          data-page-url=""
+          data-page-title=""
+        ></div>
+      </div>
+    </section>
   </main>
   <script src="../content/featured/featured.js"></script>
   <script src="../content/latest/latest.js"></script>
@@ -195,13 +270,6 @@
       document.getElementById("articleDek").textContent = articleData.summary;
     }
   </script>
-  <div id="cusdis_thread"
-    data-host="https://cusdis.com"
-    data-app-id="4207f769-6521-405b-9253-d8ef609273ff"
-    data-page-id=""
-    data-page-url=""
-    data-page-title=""
-  ></div>
   <script>
     const cusdisThread = document.getElementById("cusdis_thread");
 
