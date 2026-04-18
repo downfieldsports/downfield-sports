@@ -21,7 +21,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon/favicon_package_32.png?v=4" />
   <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon/favicon_package_16.png?v=4" />
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/favicon_package_180.png?v=4" />
-  <script id="dsq-count-scr" src="//downfieldsports.disqus.com/count.js" async></script>
   <style>
     * {
       box-sizing: border-box;
@@ -1102,7 +1101,7 @@
     function renderFeaturedSection() {
       const { featured, sideStories } = homepageData;
       featuredSection.innerHTML = `
-        <a href="${featured.href}" class="featured-main" data-disqus-identifier="${featured.href}" data-disqus-url="https://downfieldsports.com/${featured.href}">
+        <a href="${featured.href}" class="featured-main">
           <img src="${featured.image}" alt="${featured.alt}">
           <div class="featured-content">
             <span class="article-meta">${formatDisplayDate(featured.publishedAt)}</span>
@@ -1113,7 +1112,7 @@
         </a>
         <div class="side-stories">
           ${sideStories.map((story) => `
-            <a href="${story.href}" class="side-story" data-disqus-identifier="${story.href}" data-disqus-url="https://downfieldsports.com/${story.href}">
+            <a href="${story.href}" class="side-story">
               <img src="${story.image}" alt="${story.alt}">
               <div class="side-story-content">
                 <span class="article-meta">${formatDisplayDate(story.publishedAt)}</span>
@@ -1156,7 +1155,7 @@
         <h2 class="section-title">Latest Articles</h2>
         <div class="article-grid">
           ${homepageData.latest.map((article) => `
-            <a href="${article.href}" class="article-card" data-disqus-identifier="${article.href}" data-disqus-url="https://downfieldsports.com/${article.href}">
+            <a href="${article.href}" class="article-card">
               <img src="${article.image}" alt="${article.alt}">
               <div class="article-content">
                 <span class="article-meta">${formatDisplayDate(article.publishedAt)}</span>
