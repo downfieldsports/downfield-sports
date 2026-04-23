@@ -3,24 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DownField Sports - NFL & MLB News, Analysis & Scores</title>
-  <meta name="description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://downfieldsports.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="DownField Sports - NFL & MLB News, Analysis & Scores" />
-  <meta property="og:description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
-  <meta property="og:url" content="https://downfieldsports.com/" />
-  <meta property="og:image" content="/Images/Article Images/Football+Field.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DownField Sports - NFL & MLB News, Analysis & Scores" />
-  <meta name="twitter:description" content="DownField Sports delivers NFL and MLB news, opinions, analysis, and live updates." />
-  <meta name="twitter:image" content="/Images/Article Images/Football+Field.png" />
-  <link rel="shortcut icon" href="/Images/favicon/favicon.ico?v=4" />
-  <link rel="icon" href="/Images/favicon/favicon.ico?v=4" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon/favicon_package_32.png?v=4" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon/favicon_package_16.png?v=4" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/favicon_package_180.png?v=4" />
+  <title>DownField Sports</title>
+  <link rel="icon" href="Images/favicon/favicon.ico?v=4" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon_package_32.png?v=4" />
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon_package_16.png?v=4" />
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/favicon_package_180.png?v=4" />
   <style>
     * {
       box-sizing: border-box;
@@ -68,34 +55,38 @@
       margin: 0;
     }
 
-    .logo-mark-shell,
-    .logo-title-shell {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .logo-mark-shell {
+      display: block;
+      height: 58px;
       overflow: hidden;
       flex: 0 0 auto;
     }
 
-    .logo-mark-shell {
-      min-height: 60px;
-    }
-
     .logo-title-shell {
-      min-height: 60px;
+      display: block;
+      height: 156px;
+      overflow: hidden;
+      flex: 0 0 auto;
       max-width: calc(100vw - 220px);
       margin-left: auto;
       margin-right: 0;
+      transform: translateX(clamp(0px, 1.6vw, 18px));
     }
 
-    .logo-mark,
+    .logo-mark {
+      display: block;
+      width: auto;
+      height: 170px;
+      margin-top: -60px;
+      clip-path: inset(64px 0 52px 58px);
+    }
+
     .logo-title {
       display: block;
       width: auto;
-      height: auto;
-      max-height: 100px;
-      margin: 0;
-      object-fit: contain;
+      height: 480px;
+      margin-top: clamp(-146px, -10vw, -108px);
+      clip-path: inset(72px 0 96px 0);
     }
 
     nav {
@@ -105,7 +96,7 @@
       position: relative;
       padding-left: 24px;
       padding-right: 194px;
-      margin-top: 0;
+      margin-top: -34px;
       gap: 14px 30px;
       width: 100%;
     }
@@ -498,6 +489,25 @@
       gap: 22px;
     }
 
+    body.layout-newsdesk .article-card:first-child {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
+      align-items: stretch;
+    }
+
+    body.layout-newsdesk .article-card:first-child img {
+      height: 100%;
+      min-height: 100%;
+    }
+
+    body.layout-newsdesk .article-card:first-child .article-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 24px;
+    }
+
     body.layout-showcase .container {
       max-width: 1280px;
     }
@@ -646,19 +656,21 @@
     }
 
     body.layout-digest .article-card {
-      display: block;
+      display: grid;
+      grid-template-columns: 116px minmax(0, 1fr);
+      align-items: center;
       border: 1px solid rgba(27, 31, 59, 0.08);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      box-shadow: none;
+      border-radius: 0;
     }
 
     body.layout-digest .article-card img {
-      height: 180px;
-      min-height: 0;
+      height: 100%;
+      min-height: 116px;
     }
 
     body.layout-digest .article-content {
-      padding: 18px;
+      padding: 14px 16px;
     }
 
     body.layout-digest .article-content h3 {
@@ -867,12 +879,17 @@
         grid-template-columns: 1fr;
       }
 
+      body.layout-newsdesk .article-card:first-child,
       body.layout-showcase .article-card,
       body.layout-showcase .article-card:first-child,
       body.layout-showcase .article-card:nth-child(2),
       body.layout-showcase .article-card:nth-child(3),
       body.layout-showcase .article-card:nth-child(4) {
         grid-column: auto;
+      }
+
+      body.layout-newsdesk .article-card:first-child {
+        grid-template-columns: 1fr;
       }
 
       body.layout-showcase .featured-main img {
@@ -942,8 +959,9 @@
       }
 
       .logo-mark {
-        max-height: 80px;
-        margin: 0;
+        height: 120px;
+        margin-top: -42px;
+        clip-path: inset(44px 0 36px 40px);
       }
 
       .logo {
@@ -953,22 +971,24 @@
       }
 
       .logo-mark-shell {
-        min-height: 50px;
+        height: 44px;
       }
 
       .logo-title-shell {
-        min-height: 50px;
+        height: clamp(92px, 13vw, 112px);
         max-width: calc(100vw - 150px);
         margin-right: 0;
+        transform: translateX(clamp(0px, 1.8vw, 18px));
       }
 
       .logo-title {
-        max-height: 80px;
-        margin: 0;
+        height: clamp(270px, 36vw, 332px);
+        margin-top: clamp(-100px, -11vw, -76px);
+        clip-path: inset(48px 0 64px 0);
       }
 
       nav {
-        margin-top: 0;
+        margin-top: -24px;
       }
 
       body.nav-editorial nav {
@@ -1014,10 +1034,10 @@
     <div class="top-bar">
       <a href="#" class="logo" aria-label="DownField Sports home">
         <span class="logo-mark-shell">
-          <img class="logo-mark" src="Images/DFS%20Logo/Title%20Images/DFS_primary_true_transparent_attempt.png" alt="DownField Sports logo">
+          <img class="logo-mark" src="Images/DFS_primary_true_transparent_attempt.png" alt="DownField Sports logo">
         </span>
         <span class="logo-title-shell">
-          <img class="logo-title" src="Images/DFS%20Logo/Title%20Images/downfield_sports_ultra_clean.png" alt="DownField Sports">
+          <img class="logo-title" src="Images/downfield_sports_ultra_clean.png" alt="DownField Sports">
         </span>
       </a>
       <nav>
@@ -1050,13 +1070,13 @@
     <p>© 2026 DownField Sports. All rights reserved.</p>
   </footer>
 
-  <script src="content/featured/featured.js"></script>
-  <script src="content/side-stories/side-stories.js"></script>
-  <script src="content/trending/trending.js"></script>
-  <script src="content/latest/latest.js"></script>
-  <script src="content/quick-reads/quick-reads.js"></script>
-  <script src="content/newsletter/newsletter.js"></script>
-  <script src="articles.js"></script>
+  <script src="content/featured/featured.js?v=20260423"></script>
+  <script src="content/side-stories/side-stories.js?v=20260423"></script>
+  <script src="content/trending/trending.js?v=20260423"></script>
+  <script src="content/latest/latest.js?v=20260423"></script>
+  <script src="content/quick-reads/quick-reads.js?v=20260423"></script>
+  <script src="content/newsletter/newsletter.js?v=20260423"></script>
+  <script src="articles.js?v=20260423"></script>
   <script>
     const featuredSection = document.getElementById("featuredSection");
     const trendingSection = document.getElementById("trendingSection");
